@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vishnuazurepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vishnuazurepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: vishnuazurepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: vishnuazurepipelinesjavascriptdocker 
+          image: aksreg1.azurecr.io/vishnuazurepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8888
